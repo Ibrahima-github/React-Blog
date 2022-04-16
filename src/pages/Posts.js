@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {Article} from '../components/Article';
+import {Card} from '../components/Card';
 
 const Posts = () => {
 
@@ -29,10 +29,10 @@ const Posts = () => {
         <div className="d-flex justify-content-center">
            
 
-            <div className='Article'>
+            <div className='Card'>
             {posts.map(post=>
             
-                        <Article 
+                        <Card 
                             key={post.PostId}
                             title={post.PostName}
                             category={post.Category}

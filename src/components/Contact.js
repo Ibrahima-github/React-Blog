@@ -1,15 +1,14 @@
-import React , {setState} from 'react';
+import React  from 'react';
 import { Fade, Slide } from "react-reveal";
 import emailjs from 'emailjs-com';
 
-
-function Contact(props) {
-  // const [toSend, setToSend] = useState({
-  //   to_name: '',
-  //   reply_to: '',
-  //   contactSubject: '',
-  //   message: '',
-  // });
+ function Contact(props) {
+   /* const [toSend, setToSend] = useState({
+     to_name: '',
+     reply_to: '',
+     contactSubject: '',
+     message: '',
+  }); */
 
 
   if (!props.data) return null;
@@ -23,7 +22,7 @@ function Contact(props) {
   function sendEmail(e) {
     e.preventDefault();
 
-    emailjs.sendForm(process.env.REACT_APP_SERVICE, process.env.REACT_APP_TEMPLATE, e.target, process.env.REACT_APP_USER)
+    emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE, process.env.REACT_APP_REACT_APP_EMAILJS_TEMPLATE, e.target, process.env.REACT_APP_REACT_APP_EMAILJS_USER)
       .then((result) => {
           alert("Votre message a bien été envoyé.");
        
@@ -148,5 +147,5 @@ function Contact(props) {
 }
 
 
-
 export default Contact;
+
